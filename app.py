@@ -9,13 +9,13 @@ app = Flask(__name__)
 def main():
     hostname = socket.gethostname()
     local_ip = socket.gethostbyname(hostname)
-    return 'Hello from hostname: ' + hostname + '\nHello from env.hostname: ' + os.environ['POD_NAME'] if "POD_NAME" in os.environ else "none" + '\nIP:' + local_ip + '\n'
+    return 'success\nHello from hostname: ' + hostname + '\nHello from env.hostname: ' + os.environ['POD_NAME'] if "POD_NAME" in os.environ else "none" + '\nIP:' + local_ip + '\n'
 
 @app.route('/host')
 def host():
     hostname= socket.gethostname()
     local_ip = socket.gethostbyname(hostname)
-    return hostname + ' \n' + local_ip
+    return "success\n" + hostname + ' \n' + local_ip
 
 
 if __name__ == "__main__":
