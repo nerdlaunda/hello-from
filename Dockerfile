@@ -1,5 +1,5 @@
 FROM python:3
-EXPOSE 9000
+#EXPOSE 9000
 WORKDIR /usr/src/app
 
 
